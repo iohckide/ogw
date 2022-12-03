@@ -31,8 +31,8 @@ button:hover {background-color:none;}
 @keyframes anchor {0% {transform:translateY(0);} 50% {transform:translateY(-10px);} 100% {transform:translateY(0);}}
 @keyframes main-fadeout {0% {opacity:1;} 100% {opacity:0;}}
 
-.arrow-down div {position:absolute; bottom:20px; left:calc((100% / 2) - 28px); width:56px; height:20px; background:url(/img/arrow_down_gray.svg) center no-repeat; background-size:100%; animation:anchor 1s infinite ease-in-out;}
-.arrow-down.white div {width:56px; height:20px; background:url(/img/arrow_down_white.svg) center no-repeat; background-size:100%;}
+.arrow-down div {position:absolute; bottom:20px; left:calc((100% / 2) - 28px); width:56px; height:20px; background:url(./img/arrow_down_gray.svg) center no-repeat; background-size:100%; animation:anchor 1s infinite ease-in-out;}
+.arrow-down.white div {width:56px; height:20px; background:url(./img/arrow_down_white.svg) center no-repeat; background-size:100%;}
 
 body {display:flex; justify-content:center; background-color:#222;}
 .wrap {width:100%; max-width:500px; box-sizing:border-box;}
@@ -42,8 +42,8 @@ body {display:flex; justify-content:center; background-color:#222;}
 .wrap .header h4 span {font-weight:700;}
 .wrap .content {padding-top:70px;}
 .wrap .content .section {position:relative; max-width:500px; height:calc(100vh - 70px); padding:20px 20px; background-color:#fff; box-sizing:border-box;}
-.wrap .content .section.bg {position:fixed; width:100%; aspect-ratio:3 / 4; padding:0 20px 20px; background:url(/img/main.png) center no-repeat; background-size:cover; box-sizing:border-box; z-index:-1;}
-.wrap .content .section.sec0 {display:flex; flex-flow:column; align-items:center; justify-content:center; width:100%; aspect-ratio:3 / 4; padding:0 20px 20px; background:url(/img/main_white.png) center no-repeat; background-size:cover; box-sizing:border-box;}
+.wrap .content .section.bg {position:fixed; width:100%; aspect-ratio:3 / 4; padding:0 20px 20px; background:url(./img/main.png) center no-repeat; background-size:cover; box-sizing:border-box; z-index:-1;}
+.wrap .content .section.sec0 {display:flex; flex-flow:column; align-items:center; justify-content:center; width:100%; aspect-ratio:3 / 4; padding:0 20px 20px; background:url(./img/main_white.png) center no-repeat; background-size:cover; box-sizing:border-box;}
 .wrap .content .section.sec0 .txt {margin-top:140px; text-align:center;}
 .wrap .content .section.sec1 {width:100%; aspect-ratio:3 / 4; padding:0 20px 20px; background:transparent; background-size:cover; box-sizing:border-box;}
 .wrap .content .section.sec1 .main {display:flex; flex-flow:column; justify-content:space-between; height:100%;}
@@ -53,7 +53,7 @@ body {display:flex; justify-content:center; background-color:#222;}
 .wrap .content .section.sec1 .main .txt h2 span {font-size:42px; color:#fff;}
 .wrap .content .section.sec1 .main .txt h3 {font-family:'Cafe24Dangdanghae'; color:#fff;}
 .wrap .content .section.sec2 {display:flex; flex-flow:column; align-items:center; justify-content:space-between;}
-.wrap .content .section.sec2 .dv {width:calc(100% - 40px); height:40px; background:url(/img/divider.svg) center no-repeat; background-size:100%;}
+.wrap .content .section.sec2 .dv {width:calc(100% - 40px); height:40px; background:url(./img/divider.svg) center no-repeat; background-size:100%;}
 .wrap .content .section.sec2 .dv.end {transform: rotate(180deg);}
 .wrap .content .section.sec2 h3 {color:#844a0c; text-align:center;}
 .wrap .content .section.sec2 h4 {margin-top:30px; text-align:center;}
@@ -66,4 +66,4 @@ body {display:flex; justify-content:center; background-color:#222;}
 .wrap .content .section.sec5 ul li ~ li {border-top:1px solid #555;}
 .wrap .content .section.sec5 ul li h3 {color:#fff;}
 .wrap .content .section.sec5 ul li h4 {color:#fff;}
-.wrap .content .section.sec5 ul li .call {width:48px; height:48px; background-color:#fafafa; background:url(/img/call.svg) center no-repeat; background-size:48px;}
+.wrap .content .section.sec5 ul li .call {width:48px; height:48px; background-color:#fafafa; background:url(./img/call.svg) center no-repeat; background-size:48px;}
