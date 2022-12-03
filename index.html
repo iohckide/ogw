@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오건우의 첫 생일에 초대합니다.</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h3>오건우의 첫 생일에 초대합니다.</h3>
+            <h4>생일까지 <span>35</span>일 남았습니다.</h4>
+        </div>
+        <div class="content">
+            <div class="section bg"></div>
+            <div class="section sec0">
+                <div class="txt">
+                    <h2>안녕하세요!</h2>
+                    <h2>건우가 보내는<br />초대장입니다:)</h2>
+                </div>
+                <a class="arrow-down" href="#sec1"><div></div></a>
+            </div>
+            <div id="sec1" class="section sec1">
+                <div class="main">
+                    <h2 class="tit">Birthday!</h2>
+                    <div class="txt">
+                        <h2>
+                            Happy 1st Birthday<br />
+                            <span>오건우의 첫 생일</span>
+                        </h2>
+                        <h3>
+                            2023.01.07 토요일 오후 6시<br />
+                            더 아리엘 수원점
+                        </h3>
+                    </div>
+                </div>
+                <div class="arrow-down white"><div></div></div>
+            </div>
+            <div class="section sec2">
+                <div class="dv start"></div>
+                <div class="txt">
+                    <h3>모시는 글</h3>
+                    <h4>
+                        부모라는 이름을 선물하고<br />
+                        큰 사랑과 감사를 가르쳐준 우리 건우가<br />
+                        드디어 첫 생일을 맞이하였습니다.<br /><br />
+                        그동안 사랑을 베풀어 주신 모든 분들께<br />
+                        감사의 마음을 전하기 위해<br />
+                        조촐한 자리를 마련하였습니다.<br /><br />
+                        바쁘시더라도 참석해 주시면<br />
+                        큰 기쁨이 되겠습니다.<br /><br />
+                        아빠 오지훈 ❤ 엄마 최양희
+                    </h4>
+                </div>
+                <div class="dv end"></div>
+            </div>
+            <div class="section sec3">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="/img/family.png" alt=""></div>
+                        <div class="swiper-slide"><img src="/img/family.png" alt=""></div>
+                        <div class="swiper-slide"><img src="/img/family.png" alt=""></div>
+                        <div class="swiper-slide"><img src="/img/family.png" alt=""></div>
+                        <div class="swiper-slide"><img src="/img/family.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section sec4">
+                <h3>오시는 길</h3>
+                <h4>주소</h4>
+                <h4>경기도 수원시 팔달구 중부대로 181<br />
+                    (지번: 경기도 수원시 팔달구 우만동 147-7)                    
+                </h4>
+                <h4>대중교통 이용 시</h4>
+                <h4></h4>
+                <h4>운전 시</h4>
+                <h4></h4>
+                <a href="javascript:naverMap('신월4동주민센터','37.5246971','126.8400793');">네이버 경로 안내</a>
+                <a href="javascript:kakaoMap('신월4동주민센터','37.5246971','126.8400793');">카카오 경로 안내</a>
+                <a href="javascript:tMap('신월4동주민센터','37.5246971','126.8400793');">티맵 경로 안내</a>
+            </div>
+            <div class="section sec5">
+                <ul>
+                    <li>
+                        <div>
+                            <h3>최양희</h3>
+                            <h4>우리은행 1002-211-636573</h4>
+                        </div>
+                        <button class="call"></button>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>오지훈</h3>
+                            <h4>기업은행 010-3831-2125</h4>
+                        </div>
+                        <button class="call"></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1.2,
+            spaceBetween: 10,
+            centeredSlides: true,
+        });
+
+        //티맵 길안내
+        function tMap(name,lat,lng){
+        location.href = "https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xx7179ddde21ca4bfb8e6b03c710138f41&name="+name+"&lon="+lng+"&lat="+lat;
+        }
+
+        //카카오맵 길안내
+        function kakaoMap(name,lat,lng){
+        location.href = "https://map.kakao.com/link/to/"+name+","+lat+","+lng;
+        }
+
+        //네이버맵 길안내
+        function naverMap(name,lat,lng){
+        location.href = "http://app.map.naver.com/launchApp/?version=11&menu=navigation&elat="+lat+"&elng="+lng+"&etitle="+name;
+        }
+    </script>
+</body>
+</html>
