@@ -62,6 +62,7 @@
                     </h4>
                 </div>
                 <div class="dv end"></div>
+                <a class="arrow-down"><div></div></a>
             </div>
             <div class="section sec3">
                 <div class="swiper mySwiper">
@@ -73,6 +74,7 @@
                         <div class="swiper-slide"><img src="./img/family.png" alt=""></div>
                     </div>
                 </div>
+                <a class="arrow-down"><div></div></a>
             </div>
             <div class="section sec4">
                 <h3>오시는 길</h3>
@@ -87,24 +89,26 @@
                 <a href="javascript:naverMap('신월4동주민센터','37.5246971','126.8400793');">네이버 경로 안내</a>
                 <a href="javascript:kakaoMap('신월4동주민센터','37.5246971','126.8400793');">카카오 경로 안내</a>
                 <a href="javascript:tMap('신월4동주민센터','37.5246971','126.8400793');">티맵 경로 안내</a>
+                <a class="arrow-down"><div></div></a>
             </div>
             <div class="section sec5">
                 <ul>
                     <li>
                         <div>
                             <h3>최양희</h3>
-                            <h4>우리은행 1002-211-636573</h4>
+                            <h4>우리은행 1002-211-636573<input id="accnt1" value="1002211636573"><button onclick="copyToClipBoard1()"></button></h4>
                         </div>
-                        <button class="call"></button>
+                        <a href="tel:01030759231" class="call"></a>
                     </li>
                     <li>
                         <div>
                             <h3>오지훈</h3>
-                            <h4>기업은행 010-3831-2125</h4>
+                            <h4>기업은행 010-3831-2125<input id="accnt2" value="01038312125"><button onclick="copyToClipBoard2()"></button></h4>
                         </div>
-                        <button class="call"></button>
+                        <a href="tel:01038312125" class="call"></a>
                     </li>
                 </ul>
+                <h4 class="toast">계좌가 복사되었습니다.</h4>
             </div>
         </div>
     </div>
@@ -115,6 +119,30 @@
             $('html').animate({scrollTop: nowScroll + moveScroll});
             navigator.vibrate([15]);
         })
+
+        function copyToClipBoard1() {
+            var copyText = document.getElementById("accnt1");
+            copyText.select();
+            document.execCommand("Copy");
+            $('.toast').css('opacity', '1');
+            $('.toast').css('z-index', '0');
+            setTimeout(function(){
+                $('.toast').css('opacity', '0');
+                $('.toast').css('z-index', '-1');
+            }, 1500);  
+        }
+
+        function copyToClipBoard2() {
+            var copyText = document.getElementById("accnt2");
+            copyText.select();
+            document.execCommand("Copy");
+            $('.toast').css('opacity', '1');
+            $('.toast').css('z-index', '0');
+            setTimeout(function(){
+                $('.toast').css('opacity', '0');
+                $('.toast').css('z-index', '-1');
+            }, 1500);  
+        }
 
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1.2,

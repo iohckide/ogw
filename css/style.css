@@ -1,12 +1,12 @@
 html,body,div,h1,h2,h3,h4,h5,h6,ul,li,a {padding:0; margin:0;}
-body {background-color:#ad7200;}
-h1,h2,h3,h4,h5,h6 {font-family:GowunBatang-Regular, Arial, Helvetica, sans-serif; color:#222;}
+body {background-color:#c99e6c;}
+h1,h2,h3,h4,h5,h6,input {font-family:GowunBatang-Regular, Arial, Helvetica, sans-serif; color:#222;}
 h1,h2,h3 {font-weight:700; line-height:1.4;}
 h4,h5,h6 {font-weight:400; line-height:1.4;}
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {display:none;}
 a, a:link, a:visited, a:active, a:hover {text-decoration:none; cursor:pointer;}
-a, input, label, button {-webkit-tap-highlight-color:transparent;}
+a, input, label, button, input:focus {-webkit-tap-highlight-color:transparent; outline:none;}
 ul {list-style:none; margin-block-start:0; margin-block-end:0; margin-inline-start:0px; margin-inline-end:0px; padding-inline-start:0;}
 button {background:none; border:none; cursor:pointer;}
 button:hover {background-color:none;}
@@ -36,7 +36,7 @@ button:hover {background-color:none;}
 
 body {display:flex; justify-content:center; background-color:#222;}
 .wrap {width:100%; max-width:500px; box-sizing:border-box;}
-.wrap .header {display:flex; position:fixed; flex-flow:column; justify-content:center; align-items:center; width:100%; max-width:500px; height:70px; background-color:#ad7200; z-index:100;}
+.wrap .header {display:flex; position:fixed; flex-flow:column; justify-content:center; align-items:center; width:100%; max-width:500px; height:70px; background-color:#c99e6c; z-index:100;}
 .wrap .header h3 {color:#fff; font-weight:700;}
 .wrap .header h4 {color:#fff; animation:blink 1.4s infinite ease-in-out;}
 .wrap .header h4 span {font-weight:700;}
@@ -57,13 +57,16 @@ body {display:flex; justify-content:center; background-color:#222;}
 .wrap .content .section.sec2 .dv.end {transform: rotate(180deg);}
 .wrap .content .section.sec2 h3 {color:#844a0c; text-align:center;}
 .wrap .content .section.sec2 h4 {margin-top:30px; text-align:center;}
-.wrap .content .section.sec3 {height:auto; padding:20px 0; background-color:#fafafa;}
+.wrap .content .section.sec3 {display:flex; align-items:center; padding:20px 0; background-color:#fafafa;}
 .wrap .content .section.sec3 .swiper .swiper-wrapper .swiper-slide img {width:100%; border-radius:10px;}
-.wrap .content .section.sec4 {height:auto;}
 .wrap .content .section.sec5 {height:auto; background-color:#222;}
 .wrap .content .section.sec5 ul {padding:0; margin:0;}
 .wrap .content .section.sec5 ul li {display:flex; justify-content:space-between; align-items:center; padding:15px 0; list-style:none;}
 .wrap .content .section.sec5 ul li ~ li {border-top:1px solid #555;}
-.wrap .content .section.sec5 ul li h3 {color:#fff;}
-.wrap .content .section.sec5 ul li h4 {color:#fff;}
+.wrap .content .section.sec5 ul li div {width:70%;}
+.wrap .content .section.sec5 ul li div h3 {color:#fff;}
+.wrap .content .section.sec5 ul li div h4 {color:#fff;}
+.wrap .content .section.sec5 ul li div h4 input {position:absolute; left:20px; border:none; background:none; color:#fff; font-size:16px; text-indent:9999px;}
+.wrap .content .section.sec5 ul li div h4 button {width:20px; height:20px; margin-left:5px; background:url(../img/copy.svg) center no-repeat; background-size:20px;}
 .wrap .content .section.sec5 ul li .call {width:48px; height:48px; background-color:#fafafa; background:url(../img/call.svg) center no-repeat; background-size:48px;}
+.wrap .content .section.sec5 .toast {display:flex; position:absolute; left:calc(50% - 120px); bottom:30px; align-items:center; justify-content:center; width:240px; height:40px; border-radius:20px; background-color:#fff; opacity:0; transition:1s; z-index:-1;}
