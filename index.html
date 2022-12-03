@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>오건우의 첫 생일에 초대합니다.</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    
 </head>
 <body>
     <div class="wrap">
@@ -22,7 +24,7 @@
                     <h2>안녕하세요!</h2>
                     <h2>건우가 보내는<br />초대장입니다:)</h2>
                 </div>
-                <a class="arrow-down" href="#sec1"><div></div></a>
+                <a class="arrow-down"><div></div></a>
             </div>
             <div id="sec1" class="section sec1">
                 <div class="main">
@@ -104,6 +106,13 @@
         </div>
     </div>
     <script>
+        $('.arrow-down').click(function() {
+            var nowScroll = $(window).scrollTop();
+            var moveScroll = $(window).outerHeight(true) - 70;
+            $('html').animate({scrollTop: nowScroll + moveScroll});
+            navigator.vibrate([15]);
+        })
+
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1.2,
             spaceBetween: 10,
