@@ -30,28 +30,32 @@ button:hover {background-color:none;}
 @keyframes blink {0% {opacity:1;} 50% {opacity:.7;} 100% {opacity:1;}}
 @keyframes anchor {0% {transform:translateY(0);} 50% {transform:translateY(-10px);} 100% {transform:translateY(0);}}
 @keyframes main-fadeout {0% {opacity:1;} 100% {opacity:0;}}
+@keyframes updown {0% {transform:translateY(-10px);} 50% {transform:translateY(10px);} 100% {transform:translateY(-10px);}}
 
-.arrow-down div {position:absolute; bottom:20px; left:calc((100% / 2) - 28px); width:56px; height:20px; background:url(../img/arrow_down_gray.svg) center no-repeat; background-size:100%; animation:anchor 1s infinite ease-in-out;}
+.arrow-down div {position:absolute; bottom:20px; left:calc((100% / 2) - 28px); width:56px; height:20px; background:url(../img/arrow_down_gray.svg) center no-repeat; background-size:100%; animation:anchor 1s infinite ease-in-out; z-index:200;}
 .arrow-down.white div {width:56px; height:20px; background:url(../img/arrow_down_white.svg) center no-repeat; background-size:100%;}
+
+.sec0, .sec2, .sec3, .sec4, .sec5 {z-index:100;}
 
 body {display:flex; justify-content:center; background-color:#222;}
 .wrap {width:100%; max-width:500px; box-sizing:border-box;}
-.wrap .header {display:flex; position:fixed; flex-flow:column; justify-content:center; align-items:center; width:100%; max-width:500px; height:70px; background-color:#c99e6c; z-index:100;}
+.wrap .header {display:flex; position:fixed; flex-flow:column; justify-content:center; align-items:center; width:100%; max-width:500px; height:70px; background-color:#c99e6c; z-index:1000;}
 .wrap .header h3 {color:#fff; font-weight:700;}
 .wrap .header h4 {color:#fff; animation:blink 1.4s infinite ease-in-out;}
 .wrap .header h4 span {font-weight:700;}
 .wrap .content {padding-top:70px;}
 .wrap .content .section {position:relative; max-width:500px; height:calc(100vh - 70px); padding:20px 20px; background-color:#fff; box-sizing:border-box;}
-.wrap .content .section.bg {position:fixed; width:100%; aspect-ratio:3 / 4; padding:0 20px 20px; background:url(../img/main.png) center no-repeat; background-size:cover; box-sizing:border-box; z-index:-1;}
-.wrap .content .section.sec0 {display:flex; flex-flow:column; align-items:center; justify-content:center; width:100%; aspect-ratio:3 / 4; padding:0 20px 20px; background:url(../img/main_white.png) center no-repeat; background-size:cover; box-sizing:border-box;}
-.wrap .content .section.sec0 .txt {margin-top:140px; text-align:center;}
+.wrap .content .section.bg {position:fixed; width:100%; aspect-ratio:3 / 4; padding:0 20px 20px; background:url(../img/main.png) center no-repeat; background-size:cover; box-sizing:border-box; z-index:0;}
+.wrap .content .section.bg2 {position:fixed; bottom:0; width:100%; aspect-ratio:3 / 4; background:url(../img/main_layer.png) center no-repeat; background-size:cover; box-sizing:border-box; z-index:1;}
+.wrap .content .section.sec0 {display:flex; flex-flow:column; align-items:center; justify-content:center; width:100%; aspect-ratio:3 / 4; padding:0 20px 20px; background:url(../img/main_white.png) center no-repeat; background-size:cover; box-sizing:border-box; z-index:100;}
+.wrap .content .section.sec0 .txt {margin-top:170px; font-size:20px; text-align:center;}
 .wrap .content .section.sec1 {width:100%; aspect-ratio:3 / 4; padding:0 20px 20px; background:transparent; background-size:cover; box-sizing:border-box;}
 .wrap .content .section.sec1 .main {display:flex; flex-flow:column; justify-content:space-between; height:100%;}
-.wrap .content .section.sec1 .main .tit {font-family: 'Courgette', cursive; color:#fff; font-size:80px; text-align:center;}
-.wrap .content .section.sec1 .main .txt {text-align:right; margin-bottom:56px;}
-.wrap .content .section.sec1 .main .txt h2 {font-family:'Cafe24Dangdanghae'; font-size:30px; color:#fff;}
-.wrap .content .section.sec1 .main .txt h2 span {font-size:42px; color:#fff;}
-.wrap .content .section.sec1 .main .txt h3 {font-family:'Cafe24Dangdanghae'; color:#fff;}
+.wrap .content .section.sec1 .main .tit {font-family: 'Courgette', cursive; color:#fff; font-size:80px; text-align:center; animation:updown 1s infinite ease-in-out; z-index:0;}
+.wrap .content .section.sec1 .main .txt {text-align:right; margin-bottom:56px; z-index:100;}
+.wrap .content .section.sec1 .main .txt h2 {font-family:'Cafe24Dangdanghae'; font-size:33px; color:#fff;}
+.wrap .content .section.sec1 .main .txt h2 span {font-size:45px; color:#fff;}
+.wrap .content .section.sec1 .main .txt h3 {margin-top:10px; font-family:'Cafe24Dangdanghae'; font-size:24px; color:#fff;}
 .wrap .content .section.sec2 {display:flex; flex-flow:column; align-items:center; justify-content:space-between;}
 .wrap .content .section.sec2 .dv {width:calc(100% - 40px); height:40px; background:url(../img/divider.svg) center no-repeat; background-size:100%;}
 .wrap .content .section.sec2 .dv.end {transform: rotate(180deg);}
