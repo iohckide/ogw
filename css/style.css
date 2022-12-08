@@ -73,10 +73,10 @@ body {display:flex; justify-content:center; background-color:#222;}
 .wrap .content .section.sec5 ul {padding:0; margin:0;}
 .wrap .content .section.sec5 ul li {display:flex; justify-content:space-between; align-items:center; padding:15px 0; list-style:none;}
 .wrap .content .section.sec5 ul li ~ li {border-top:1px solid #555;}
-.wrap .content .section.sec5 ul li div {width:70%;}
+.wrap .content .section.sec5 ul li div {width:80%;}
 .wrap .content .section.sec5 ul li div h3 {color:#fff;}
-.wrap .content .section.sec5 ul li div h4 {color:#fff;}
+.wrap .content .section.sec5 ul li div h4 {position:relative; color:#fff;}
 .wrap .content .section.sec5 ul li div h4 input {position:absolute; left:20px; border:none; background:none; color:#fff; font-size:16px; text-indent:9999px;}
-.wrap .content .section.sec5 ul li div h4 button {width:20px; height:20px; margin-left:5px; background:url(../img/copy.svg) center no-repeat; background-size:20px;}
+.wrap .content .section.sec5 ul li div h4 button {position:absolute; top:4px; padding:2px 4px; margin-left:10px; margin-top:-4px; border:1px solid #eee; border-radius:20px; color:#fff;}
 .wrap .content .section.sec5 ul li .call {width:48px; height:48px; background-color:#fafafa; background:url(../img/call.svg) center no-repeat; background-size:48px;}
 .wrap .content .section.sec5 .toast {display:flex; position:absolute; left:calc(50% - 120px); bottom:30px; align-items:center; justify-content:center; width:240px; height:40px; border-radius:20px; background-color:#fff; opacity:0; transition:1s; z-index:-1;}
