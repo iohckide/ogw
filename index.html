@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     
 </head>
@@ -133,19 +134,23 @@
                     });
                 </script>
             </div>
+            <script>
+                var clipboard = new ClipboardJS('#copyHash1');
+                var clipboard = new ClipboardJS('#copyHash2');
+            </script>
             <div class="section sec5">
                 <ul>
                     <li>
                         <div>
                             <h3>최양희</h3>
-                            <h4>우리은행 1002-211-636573<input id="accnt1" value="1002211636573"><button onclick="copyToClipBoard1()"></button></h4>
+                            <h4>우리은행 1002-211-636573<button id="copyHash1" onclick="copyToast()" data-clipboard-text="1002211636573">번호 복사</button></h4>
                         </div>
                         <a href="tel:01030759231" class="call"></a>
                     </li>
                     <li>
                         <div>
                             <h3>오지훈</h3>
-                            <h4>기업은행 010-3831-2125<input id="accnt2" value="01038312125"><button onclick="copyToClipBoard2()"></button></h4>
+                            <h4>기업은행 010-3831-2125<button id="copyHash2" onclick="copyToast()" data-clipboard-text="01038312125">번호 복사</button></h4>
                         </div>
                         <a href="tel:01038312125" class="call"></a>
                     </li>
@@ -179,22 +184,7 @@
             $('html').animate({scrollTop: (moveScroll * 4) - 280});
         })
 
-        function copyToClipBoard1() {
-            var copyText = document.getElementById("accnt1");
-            copyText.select();
-            document.execCommand("Copy");
-            $('.toast').css('opacity', '1');
-            $('.toast').css('z-index', '0');
-            setTimeout(function(){
-                $('.toast').css('opacity', '0');
-                $('.toast').css('z-index', '-1');
-            }, 1500);  
-        }
-
-        function copyToClipBoard2() {
-            var copyText = document.getElementById("accnt2");
-            copyText.select();
-            document.execCommand("Copy");
+        function copyToast() {
             $('.toast').css('opacity', '1');
             $('.toast').css('z-index', '0');
             setTimeout(function(){
