@@ -46,7 +46,7 @@ body {display:flex; justify-content:center; background-color:#222;}
 .wrap .content {padding-top:70px;}
 .wrap .content .section {position:relative; max-width:500px; height:calc(100vh - 70px); padding:20px 20px; background-color:#fff; box-sizing:border-box;}
 .wrap .content .section.bg {position:fixed; width:100%; aspect-ratio:3 / 4; padding:0 20px 20px; background:url(../img/main.png) center no-repeat; background-size:cover; box-sizing:border-box; z-index:0;}
-.wrap .content .section.bg2 {position:fixed; bottom:0; width:100%; aspect-ratio:3 / 4; background:url(../img/main_layer.png) center no-repeat; background-size:cover; box-sizing:border-box; z-index:1;}
+.wrap .content .section.bg2 {position:fixed; width:100%; aspect-ratio:3 / 4; background:url(../img/main_layer.png) center no-repeat; background-size:cover; box-sizing:border-box; z-index:1;}
 .wrap .content .section.sec0 {display:flex; flex-flow:column; align-items:center; justify-content:center; width:100%; aspect-ratio:3 / 4; padding:0 20px 20px; background:url(../img/main_white.png) center no-repeat; background-size:cover; box-sizing:border-box; z-index:100;}
 .wrap .content .section.sec0 .txt {margin-top:170px; font-size:20px; text-align:center;}
 .wrap .content .section.sec1 {width:100%; aspect-ratio:3 / 4; padding:0 20px 20px; background:transparent; background-size:cover; box-sizing:border-box;}
