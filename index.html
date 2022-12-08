@@ -92,13 +92,23 @@
                 <a href="javascript:naverMap('신월4동주민센터','37.5246971','126.8400793');">네이버 경로 안내</a>
                 <a href="javascript:kakaoMap('신월4동주민센터','37.5246971','126.8400793');">카카오 경로 안내</a>
                 <a href="javascript:tMap('신월4동주민센터','37.5246971','126.8400793');">티맵 경로 안내</a>
-                <div id="map" style="width: 100%; height: 300px; margin:auto"></div>
+                <div id="map" style="width: 100%; height: 300px; margin-top:20px; border-radius:10px;"></div>
                 <code id="snippet" class="snippet"></code>
                 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=f5rjz4mwuw"></script>
                 <script id="code">
-                    var mapDiv = document.getElementById('map');
-                    var map = new naver.maps.Map(mapDiv);
-                </script>
+                    var map = new naver.maps.Map('map', {
+                        center: new naver.maps.LatLng(37.277610, 127.036235), //지도의 초기 중심 좌표
+                        zoom: 17, //지도의 초기 줌 레벨
+                        minZoom: 8, //지도의 최소 줌 레벨
+                        zoomControl: true, //줌 컨트롤의 표시 여부
+                        zoomControlOptions: { //줌 컨트롤의 옵션
+                            position: naver.maps.Position.TOP_RIGHT
+                    }});
+                    var marker = new naver.maps.Marker({
+                        position: new naver.maps.LatLng(37.277610, 127.036235),
+                        map: map
+                    });
+            </script>
             </div>
             <div class="section sec5">
                 <ul>
