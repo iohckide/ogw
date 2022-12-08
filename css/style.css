@@ -45,7 +45,7 @@ body {display:flex; justify-content:center; background-color:#222;}
 .wrap .header h4 span {font-weight:700;}
 .wrap .content {padding-top:70px;}
 .wrap .content .section {position:relative; max-width:500px; height:calc(100vh - 70px); padding:20px 20px; background-color:#fff; box-sizing:border-box;}
-.wrap .content .section.bg {position:fixed; width:100%; aspect-ratio:3 / 4; padding:0 20px 20px; background:url(../img/main.png) center no-repeat; background-size:cover; box-sizing:border-box; z-index:0;}
+.wrap .content .section.bg {position:fixed; width:100%; aspect-ratio:3 / 4; padding:0 20px 20px; background:url(../img/main.jpg) center no-repeat; background-size:cover; box-sizing:border-box; z-index:0;}
 .wrap .content .section.bg2 {position:fixed; width:100%; aspect-ratio:3 / 4; background:url(../img/main_layer.png) center no-repeat; background-size:cover; box-sizing:border-box; z-index:1;}
 .wrap .content .section.sec0 {display:flex; flex-flow:column; align-items:center; justify-content:center; width:100%; aspect-ratio:3 / 4; padding:0 20px 20px; background:url(../img/main_white.png) center no-repeat; background-size:cover; box-sizing:border-box; z-index:100;}
 .wrap .content .section.sec0 .txt {margin-top:170px; font-size:20px; text-align:center;}
@@ -63,6 +63,12 @@ body {display:flex; justify-content:center; background-color:#222;}
 .wrap .content .section.sec2 h4 {margin-top:30px; text-align:center;}
 .wrap .content .section.sec3 {display:flex; align-items:center; flex-wrap:wrap; padding:20px 0; background-color:#fff8e9;}
 .wrap .content .section.sec3 .swiper .swiper-wrapper .swiper-slide img {width:100%; border-radius:10px;}
+.wrap .content .section.sec4 {display:flex; flex-flow:column; justify-content:center; height:auto;}
+.wrap .content .section.sec4 table tr ~ tr td {border-top:1px solid #eee;}
+.wrap .content .section.sec4 table tr td {padding:20px 0; font-family:GowunBatang-Regular;}
+.wrap .content .section.sec4 table tr td .tip {margin-top:10px;}
+.wrap .content .section.sec4 .app-list .app img {width:48px; height:48px; border-radius:20px; box-shadow: 1px 1px 20px 10px rgba(0,0,0,.05);}
+.wrap .content .section.sec4 .app-list .app ~ .app {margin-left:10px;}
 .wrap .content .section.sec5 {height:auto; background-color:#222;}
 .wrap .content .section.sec5 ul {padding:0; margin:0;}
 .wrap .content .section.sec5 ul li {display:flex; justify-content:space-between; align-items:center; padding:15px 0; list-style:none;}

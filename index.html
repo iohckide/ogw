@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="./img/og_image.png">
+    <meta property="og:image" content="./img/og_image.jpg">
     <meta property="og:title" content="건우의 첫 생일">
     <meta property="og:description" content="건우의 첫 생일에 초대합니다.">
     <title>오건우의 첫 생일에 초대합니다.</title>
@@ -80,19 +80,42 @@
                 <a id="anchor4" class="arrow-down"><div></div></a>
             </div>
             <div class="section sec4">
-                <h3>오시는 길</h3>
-                <h4>주소</h4>
-                <h4>경기도 수원시 팔달구 중부대로 181<br />
-                    (지번: 경기도 수원시 팔달구 우만동 147-7)                    
-                </h4>
-                <h4>대중교통 이용 시</h4>
-                <h4></h4>
-                <h4>운전 시</h4>
-                <h4></h4>
-                <a href="javascript:naverMap('신월4동주민센터','37.5246971','126.8400793');">네이버 경로 안내</a>
-                <a href="javascript:kakaoMap('신월4동주민센터','37.5246971','126.8400793');">카카오 경로 안내</a>
-                <a href="javascript:tMap('신월4동주민센터','37.5246971','126.8400793');">티맵 경로 안내</a>
-                <div id="map" style="width: 100%; height: 300px; margin-top:20px; border-radius:10px;"></div>
+                <div class="tit">
+                    <h2>오시는 길</h2>
+                </div>
+                <table>
+                    <colgroup>
+                        <col width="20%">
+                        <col width="*">
+                    </colgroup>
+                    <tr>
+                        <td>주소</td>
+                        <td>
+                            경기도 수원시 팔달구 중부대로 181<br />
+                            (지번: 경기도 수원시 팔달구 우만동 147-7)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>대중<br />교통</td>
+                        <td>
+                            1호선 수원역4번 출구 / 버스 720-2번,<br />
+                            66번 승차 후 동수원병원 앞 하차.<br />
+                            라마다호텔 맞은편
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>운전</td>
+                        <td>
+                            <div class="app-list">
+                                <a class="app" href="javascript:naverMap('더 아리엘 수원점','37.277610','127.036235');"><img src="./img/ico_navermap.jpg" alt=""></a>
+                                <a class="app" href="javascript:kakaoMap('더 아리엘 수원점','37.277610','127.036235');"><img src="./img/ico_kakaomap.jpg" alt=""></a>
+                                <a class="app" href="javascript:tMap('더 아리엘 수원점','37.277610','127.036235');"><img src="./img/ico_tmap.jpg" alt=""></a>
+                            </div>
+                            <h5 class="tip">(*위 이미지를 누르시면 해당 앱이 실행됩니다.)</h5>
+                        </td>
+                    </tr>
+                </table>
+                <div id="map" style="width: 100%; height: 300px; margin-top:10px; border-radius:10px;"></div>
                 <code id="snippet" class="snippet"></code>
                 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=f5rjz4mwuw"></script>
                 <script id="code">
@@ -108,7 +131,7 @@
                         position: new naver.maps.LatLng(37.277610, 127.036235),
                         map: map
                     });
-            </script>
+                </script>
             </div>
             <div class="section sec5">
                 <ul>
