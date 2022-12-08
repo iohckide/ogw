@@ -18,8 +18,8 @@
 <body>
     <div class="wrap">
         <div class="header">
-            <h3>오건우의 첫 생일에 초대합니다.</h3>
-            <h4>생일까지 <span>35</span>일 남았습니다.</h4>
+            <h3>오건우의 첫 생일에 초대합니다.🎂</h3>
+            <h4>생일까지 <span id="dDay"></span>일 남았습니다.</h4>
         </div>
         <div class="content">
             <div class="section bg"></div>
@@ -160,6 +160,14 @@
         </div>
     </div>
     <script>
+        $(function () {
+            var today = new Date();
+            var dday = new Date(2022,12,07);
+            var gap = dday.getTime() - today.getTime();
+            var result = Math.ceil(gap / (1000 * 60 * 60 * 24));
+            $('#dDay').html(result);
+        })
+
         $('.arrow-down').click(function() {
             navigator.vibrate([15]);
         })
