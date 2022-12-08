@@ -28,7 +28,7 @@
                     <h2>안녕하세요!</h2>
                     <h2>건우가 보내는<br />초대장이에요:)</h2>
                 </div>
-                <a class="arrow-down"><div></div></a>
+                <a id="anchor1" class="arrow-down"><div></div></a>
             </div>
             <div id="sec1" class="section sec1">
                 <div class="main">
@@ -44,7 +44,7 @@
                         </h3>
                     </div>
                 </div>
-                <div class="arrow-down white"><div></div></div>
+                <div id="anchor2" class="arrow-down white"><div></div></div>
             </div>
             <div class="section sec2">
                 <div class="dv start"></div>
@@ -63,19 +63,21 @@
                     </h4>
                 </div>
                 <div class="dv end"></div>
-                <a class="arrow-down"><div></div></a>
+                <a id="anchor3" class="arrow-down"><div></div></a>
             </div>
             <div class="section sec3">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="./img/family.png" alt=""></div>
-                        <div class="swiper-slide"><img src="./img/family.png" alt=""></div>
-                        <div class="swiper-slide"><img src="./img/family.png" alt=""></div>
-                        <div class="swiper-slide"><img src="./img/family.png" alt=""></div>
-                        <div class="swiper-slide"><img src="./img/family.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/album01.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/album02.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/album03.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/album04.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/album05.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/album06.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/album07.jpg" alt=""></div>
                     </div>
                 </div>
-                <a class="arrow-down"><div></div></a>
+                <a id="anchor4" class="arrow-down"><div></div></a>
             </div>
             <div class="section sec4">
                 <h3>오시는 길</h3>
@@ -90,7 +92,13 @@
                 <a href="javascript:naverMap('신월4동주민센터','37.5246971','126.8400793');">네이버 경로 안내</a>
                 <a href="javascript:kakaoMap('신월4동주민센터','37.5246971','126.8400793');">카카오 경로 안내</a>
                 <a href="javascript:tMap('신월4동주민센터','37.5246971','126.8400793');">티맵 경로 안내</a>
-                <a class="arrow-down"><div></div></a>
+                <div id="map" style="width: 100%; height: 300px; margin:auto"></div>
+                <code id="snippet" class="snippet"></code>
+                <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=f5rjz4mwuw"></script>
+                <script id="code">
+                    var mapDiv = document.getElementById('map');
+                    var map = new naver.maps.Map(mapDiv);
+                </script>
             </div>
             <div class="section sec5">
                 <ul>
@@ -115,10 +123,27 @@
     </div>
     <script>
         $('.arrow-down').click(function() {
-            var nowScroll = $(window).scrollTop();
-            var moveScroll = $(window).outerHeight(true) - 70;
-            $('html').animate({scrollTop: nowScroll + moveScroll});
             navigator.vibrate([15]);
+        })
+
+        $('#anchor1').click(function() {
+            var moveScroll = $(window).outerHeight(true);
+            $('html').animate({scrollTop: moveScroll - 70});
+        })
+
+        $('#anchor2').click(function() {
+            var moveScroll = $(window).outerHeight(true);
+            $('html').animate({scrollTop: (moveScroll * 2) - 140});
+        })
+
+        $('#anchor3').click(function() {
+            var moveScroll = $(window).outerHeight(true);
+            $('html').animate({scrollTop: (moveScroll * 3) - 210});
+        })
+
+        $('#anchor4').click(function() {
+            var moveScroll = $(window).outerHeight(true);
+            $('html').animate({scrollTop: (moveScroll * 4) - 280});
         })
 
         function copyToClipBoard1() {
@@ -148,6 +173,10 @@
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1.2,
             spaceBetween: 10,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: true // 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지.
+            },
             centeredSlides: true,
         });
 
