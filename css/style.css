@@ -36,8 +36,12 @@ button:hover {background-color:none;}
 @keyframes fire-right {0% {transform:rotate(0);} 50% {transform:rotate(180deg);} 100% {transform:rotate(360deg);}}
 @keyframes fire-left {0% {transform:rotate(0);} 50% {transform:rotate(-180deg);} 100% {transform:rotate(-360deg);}}
 
-.arrow-down {position:absolute; bottom:20px; left:calc((100% / 2) - 28px); width:56px; height:20px; background:url(../img/arrow_down_gray.svg) center no-repeat; background-size:100%; animation:anchor 1s infinite ease-in-out; z-index:1000;}
+.arrow-down {position:absolute; left:calc((100% / 2) - 28px); width:56px; height:20px; background:url(../img/arrow_down_gray.svg) center no-repeat; background-size:100%; animation:anchor 1s infinite ease-in-out; z-index:1000;}
 .arrow-down.white {width:56px; height:20px; background:url(../img/arrow_down_white.svg) center no-repeat; background-size:100%;}
+#anchor1 {bottom:80px;}
+#anchor2 {bottom:40px;}
+#anchor3 {bottom:80px;}
+#anchor4 {bottom:20px;}
 .sec0, .sec2, .sec3, .sec4, .sec5 {z-index:100;}
 .wrap {width:100%; max-width:500px; box-sizing:border-box;}
 .wrap .header {display:flex; position:fixed; flex-flow:column; justify-content:center; align-items:center; width:100%; max-width:500px; height:70px; background-color:#c99e6c; z-index:9000;}
@@ -53,7 +57,7 @@ button:hover {background-color:none;}
 .wrap .content .section.sec1 {width:100%; aspect-ratio:3 / 4; padding:0 20px 20px; background:transparent; background-size:cover; box-sizing:border-box; overflow:hidden;}
 .wrap .content .section.sec1 .main {display:flex; flex-flow:column; justify-content:space-between; height:100%;}
 .wrap .content .section.sec1 .main .tit {font-family: 'Courgette', cursive; color:#fff; font-size:80px; text-align:center; animation:updown 1s infinite ease-in-out; z-index:0;}
-.wrap .content .section.sec1 .main .txt {text-align:right; margin-bottom:56px; z-index:100;}
+.wrap .content .section.sec1 .main .txt {text-align:right; margin-bottom:54px; z-index:100;}
 .wrap .content .section.sec1 .main .txt h2 {font-family:'Cafe24Dangdanghae'; font-size:33px; color:#fff;}
 .wrap .content .section.sec1 .main .txt h2 span {font-size:45px; color:#fff;}
 .wrap .content .section.sec1 .main .txt h3 {margin-top:10px; font-family:'Cafe24Dangdanghae'; font-size:24px; color:#fff;}
