@@ -35,6 +35,7 @@ button:hover {background-color:none;}
 @keyframes fire-right {0% {transform:rotate(0);} 50% {transform:rotate(180deg);} 100% {transform:rotate(360deg);}}
 @keyframes fire-left {0% {transform:rotate(0);} 50% {transform:rotate(-180deg);} 100% {transform:rotate(-360deg);}}
 
+.arrow-down {cursor:pointer;}
 .arrow-down div {position:absolute; bottom:20px; left:calc((100% / 2) - 28px); width:56px; height:20px; background:url(../img/arrow_down_gray.svg) center no-repeat; background-size:100%; animation:anchor 1s infinite ease-in-out; z-index:200;}
 .arrow-down.white div {width:56px; height:20px; background:url(../img/arrow_down_white.svg) center no-repeat; background-size:100%;}
 
