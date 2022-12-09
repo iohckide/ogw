@@ -36,9 +36,8 @@ button:hover {background-color:none;}
 @keyframes fire-right {0% {transform:rotate(0);} 50% {transform:rotate(180deg);} 100% {transform:rotate(360deg);}}
 @keyframes fire-left {0% {transform:rotate(0);} 50% {transform:rotate(-180deg);} 100% {transform:rotate(-360deg);}}
 
-.arrow-down {position:absolute; bottom:20px; left:calc((100% / 2) - 28px); cursor:pointer; z-index:1000;}
-.arrow-down div {width:56px; height:20px; background:url(../img/arrow_down_gray.svg) center no-repeat; background-size:100%; animation:anchor 1s infinite ease-in-out;}
-.arrow-down.white div {width:56px; height:20px; background:url(../img/arrow_down_white.svg) center no-repeat; background-size:100%;}
+.arrow-down {position:absolute; bottom:20px; left:calc((100% / 2) - 28px); width:56px; height:20px; background:url(../img/arrow_down_gray.svg) center no-repeat; background-size:100%; animation:anchor 1s infinite ease-in-out; z-index:1000;}
+.arrow-down.white {width:56px; height:20px; background:url(../img/arrow_down_white.svg) center no-repeat; background-size:100%;}
 .sec0, .sec2, .sec3, .sec4, .sec5 {z-index:100;}
 .wrap {width:100%; max-width:500px; box-sizing:border-box;}
 .wrap .header {display:flex; position:fixed; flex-flow:column; justify-content:center; align-items:center; width:100%; max-width:500px; height:70px; background-color:#c99e6c; z-index:1000;}
