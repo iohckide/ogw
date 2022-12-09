@@ -29,7 +29,7 @@
                     <h2>안녕하세요!</h2>
                     <h2>건우가 보내는<br />초대장이에요:)</h2>
                 </div>
-                <button id="anchor1" class="arrow-down"></button>
+                <button id="anchor1" class="arrow-down" onclick="anchor1()" style="cursor:pointer;"></button>
             </div>
             <div id="sec1" class="section sec1">
                 <div class="main">
@@ -51,7 +51,7 @@
                         </h3>
                     </div>
                 </div>
-                <button id="anchor2" class="arrow-down white"></button>
+                <button id="anchor2" class="arrow-down white" onclick="anchor2()" style="cursor:pointer;"></button>
             </div>
             <div class="section sec2">
                 <div class="dv start"></div>
@@ -70,7 +70,7 @@
                     </h4>
                 </div>
                 <div class="dv end"></div>
-                <button id="anchor3" class="arrow-down"></button>
+                <button id="anchor3" class="arrow-down" onclick="anchor3()" style="cursor:pointer;"></button>
             </div>
             <div class="section sec3">
                 <div class="swiper mySwiper">
@@ -84,7 +84,7 @@
                         <div class="swiper-slide"><img src="./img/album07.jpg" alt=""></div>
                     </div>
                 </div>
-                <button id="anchor4" class="arrow-down"></button>
+                <button id="anchor4" class="arrow-down" onclick="anchor4()" style="cursor:pointer;"></button>
             </div>
             <div class="section sec4">
                 <div class="tit">
@@ -178,25 +178,25 @@
             navigator.vibrate([15]);
         })
 
-        $('#anchor1').click(function() {
+        function anchor1() {
             var moveScroll = $(window).outerHeight(true);
             $('html').animate({scrollTop: moveScroll - 70});
-        })
+        }
 
-        $('#anchor2').click(function() {
+        function anchor2() {
             var moveScroll = $(window).outerHeight(true);
             $('html').animate({scrollTop: (moveScroll * 2) - 140});
-        })
+        }
 
-        $('#anchor3').click(function() {
+        function anchor3() {
             var moveScroll = $(window).outerHeight(true);
             $('html').animate({scrollTop: (moveScroll * 3) - 210});
-        })
+        }
 
-        $('#anchor4').click(function() {
+        function anchor4() {
             var moveScroll = $(window).outerHeight(true);
             $('html').animate({scrollTop: (moveScroll * 4) - 280});
-        })
+        }
 
         function copyToast() {
             $('.toast').css('opacity', '1');
